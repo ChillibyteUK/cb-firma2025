@@ -1,0 +1,31 @@
+.text_image_feature {
+    &__image {
+        aspect-ratio: 1;
+        width: 80%;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::after {
+            content: "";
+            width: 60%;
+            aspect-ratio: 1;
+            // background-color: color-mix(in hsl, hsl(var(--hsl-accent) / .6), transparent 30%);
+            background-color: hsl(var(--hsl-accent-400) / .5);
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        margin-left: auto;
+    }
+    .order-lg-1 {
+        padding-right: 3rem;
+        .text_image_feature__image {
+            margin-left: 0;
+            &::after {
+                transform: translate(115%, -50%);
+            }
+        }
+    }
+}
+

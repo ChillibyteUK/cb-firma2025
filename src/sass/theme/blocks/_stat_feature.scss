@@ -1,0 +1,28 @@
+.stats {
+    &__stat {
+        display: flex;
+        gap: 0.25rem;
+        align-items: baseline;
+        justify-content: center;
+        font-weight: var(--fw-600);
+        font-family: var(--ff-body);
+        .counter {
+            font-size: var(--fs-900);
+            font-family: var(--ff-title);
+            font-weight: var(--fw-400);
+            color: var(--col-primary-400);
+        }
+    }
+    &__inner {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 120px 1fr;
+    }
+    &__detail {
+        align-items: end;
+        display: flex;
+        padding-bottom: 0.8rem;
+        font-weight: var(--fw-600);
+        text-wrap: balance;
+    }
+}

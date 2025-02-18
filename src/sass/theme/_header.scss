@@ -1,0 +1,55 @@
+#wrapperNavbar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    background-color: var(--col-primary-400);
+    font-size: var(--fs-400);
+    font-size: var(--fs-300);
+
+    font-family: var(--ff-title);
+    border-bottom: 1px solid hsl( var(--hsl-accent-400) / 0.75);
+
+    @media (min-width:992px) {
+        .nav-top {
+            gap: 5rem;
+        }
+    }
+
+    a {
+        color: white;
+        padding-bottom: 0;
+        &:hover {
+            color: var(--col-accent-400);
+        }
+    }
+
+    li.current-menu-item a,
+    li.current-menu-parent a {
+        color: var(--col-accent-400);
+    }
+
+    .nav-link {
+        padding-top: 0;
+    }
+
+    .logo {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        background-image: url(../img/firma-logo--wo-nopad.svg);
+        aspect-ratio: 30 / 19;
+        width: 99px;
+    }
+
+    transition: transform var(--transition);
+
+    &.hidden {
+        transform: translateY(-100%);
+    }
+
+}

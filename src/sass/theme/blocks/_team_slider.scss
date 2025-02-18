@@ -1,0 +1,35 @@
+.team_slider {
+    &__card {
+        padding-inline: 0.5rem;
+        cursor: pointer;
+        &:hover {
+            .team_slider__image {
+                filter: grayscale(0);
+            }
+        }
+    }
+    &__card_inner {
+        margin-inline:0.25rem;
+        border: 1px solid var(--col-grey-400);
+        padding: 0.5rem;
+        width: 100%;
+    }
+    &__image {
+        display: block;
+        aspect-ratio: 3 / 4;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 0.5rem;
+        filter: grayscale(1);
+        transition: filter var(--transition);
+    }
+    &__name {
+        font-size: var(--fs-500);
+        margin-bottom: 0;
+    }
+    &__role {
+        font-size: var(--fs-200);
+    }
+
+}

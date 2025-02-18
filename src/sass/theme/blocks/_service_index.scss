@@ -1,0 +1,34 @@
+.service_index {
+    background-color: var(--col-grey-600);
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+
+    &__card {
+        text-align: center;
+        width: 180px;
+        border: 1px solid var(--col-primary-400);
+        background-color: white;
+        padding: 0.5rem;
+        transition: border var(--transition);
+        img {
+            width: 100px;
+            display: block;
+            margin-inline: auto;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            transition: color var(--transition);
+            font-size: var(--fs-600);
+        }
+        &:hover {
+            border-color: var(--col-accent-400);
+            h3 {
+                color: var(--col-accent-400);
+            }
+        }
+    }
+}
