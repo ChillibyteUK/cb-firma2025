@@ -20956,7 +20956,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   right: 0;
   z-index: 9999;
   background-color: var(--col-primary-400);
-  font-size: var(--fs-400);
   font-size: var(--fs-300);
   font-family: var(--ff-title);
   border-bottom: 1px solid hsl(var(--hsl-accent-400)/0.75);
@@ -21239,6 +21238,89 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 }
 .related__title {
   font-weight: var(--fw-600);
+}
+
+.index_blog__card {
+  display: grid;
+  height: 100%;
+  align-content: stretch;
+  grid-template-rows: auto 1fr;
+  color: var(--body-color);
+}
+.index_blog__card:hover {
+  color: var(--body-color);
+}
+.index_blog__image {
+  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+  clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.index_blog__content {
+  display: grid;
+  gap: 1rem;
+}
+.index_blog__title {
+  font-size: var(--fs-500);
+  color: var(--col-primary-400);
+  margin-bottom: 0;
+}
+.index_blog__excerpt {
+  font-size: var(--fs-300);
+  line-height: 1.3;
+}
+.index_blog__date {
+  align-self: flex-end;
+  font-size: var(--fs-200);
+  border-top: 2px solid var(--col-accent-400);
+  padding-top: 0.5rem;
+}
+
+.single_blog {
+  margin-top: calc(var(--h-top) + 1rem);
+}
+.single_blog__title {
+  font-size: var(--fs-800);
+}
+.single_blog__image {
+  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+  clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+  aspect-ratio: 16/9;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.single_blog .sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(var(--h-top) + 1rem);
+}
+.single_blog .reading {
+  font-size: var(--fs-200);
+}
+.single_blog_card {
+  display: block;
+  margin-bottom: 1rem;
+}
+.single_blog_card__image {
+  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+  clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+  aspect-ratio: 16/9;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.single_blog_card__title {
+  font-size: var(--fs-500);
+  margin-bottom: 0.25rem;
+}
+.single_blog_card__date {
+  font-size: var(--fs-100);
 }
 
 /* .fieldset-cf7mls-wrapper {
