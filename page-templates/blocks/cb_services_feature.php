@@ -21,11 +21,12 @@
             <div class="col-lg-6">
                 <div class="row g-5">
                 <?php
+                $d = 0;
                 while(have_rows('services')) {
                     the_row();
                     $s = acf_slugify(get_sub_field('service_name'));
                     ?>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade" data-aos-delay="<?=$d?>">
                         <a href="<?=get_sub_field('link')['url']?>" class="services_feature__card">
                             <img src="<?=get_stylesheet_directory_uri()?>/img/icon--<?=$s?>.svg" class="services_feature__icon" alt="<?=get_sub_field('service_name')?>">
                             <h3><?=get_sub_field('service_name')?></h3>
@@ -34,6 +35,7 @@
                         </a>
                     </div>
                     <?php
+                    $d+=100;
                 }
                 ?>
                 </div>
