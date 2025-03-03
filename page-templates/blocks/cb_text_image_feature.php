@@ -14,11 +14,11 @@ if ($background == 'Blue') {
     $dd = 'device-wo.svg';
 }
 
-var_dump($background);
-var_dump($underline);
-var_dump($overlay);
-var_dump($pattern);
-var_dump($device);
+// var_dump($background);
+// var_dump($underline);
+// var_dump($overlay);
+// var_dump($pattern);
+// var_dump($device);
 
 $order_left = (get_field('order') == 'text') ? 'order-1 order-lg-1' : 'order-1 order-lg-2';
 $order_right = (get_field('order') == 'text') ? 'order-2 order-lg-2' : 'order-2 order-lg-1';
