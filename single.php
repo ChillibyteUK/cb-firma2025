@@ -41,7 +41,8 @@ $img = get_the_post_thumbnail_url(get_the_ID(),'full');
                 ?>
                 <div class="post-navigation mt-4 d-flex flex-wrap justify-content-between">
                     <?php 
-                        previous_post_link('<div class="prev">%link</div>', '&larr; Previous'); 
+                        previous_post_link('<div class="prev">%link</div>', '&larr; Previous');
+                        echo '&nbsp;';
                         next_post_link('<div class="next">%link</div>', 'Next &rarr;'); 
                     ?>
                 </div>
