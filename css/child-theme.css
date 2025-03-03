@@ -21348,7 +21348,7 @@ body .gform_wrapper .gform_footer button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, hsl(var(--hsl-primary-400)/1), transparent), url(../img/hero-overlay.svg);
+  background: linear-gradient(45deg, hsl(var(--hsl-primary-400)/1) 20%, transparent), url(../img/hero-overlay.svg);
   background-size: auto;
   background-position: right bottom;
   background-repeat: no-repeat;
