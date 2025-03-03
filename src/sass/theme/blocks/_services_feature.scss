@@ -19,7 +19,7 @@
             color: var(--col-primary-400);
         }
         p {
-            font-size: var(--fs-300);
+            font-size: var(--fs-200);
             color: black;
         }
         &:hover {
@@ -35,7 +35,7 @@
     }
     &__link {
         font-family: var(--ff-title);
-        font-size: var(--fs-400);
+        font-size: var(--fs-300);
         position: relative;
         align-self: flex-end;
         &::after {

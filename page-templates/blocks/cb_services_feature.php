@@ -1,6 +1,6 @@
 <section class="services_feature has-tile-bg has-tile-bg--wo has-tile-bg--right py-5">
     <div class="container-xl py-5">
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-lg-6">
                 <h2 class="underline mb-4">
                     <?=get_field('title')?>
@@ -19,7 +19,7 @@
                     ?>
             </div>
             <div class="col-lg-6">
-                <div class="row g-5">
+                <div class="row g-4">
                 <?php
                 $d = 0;
                 while(have_rows('services')) {
