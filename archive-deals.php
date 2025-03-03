@@ -26,17 +26,19 @@ get_header();
         ?>
         <div class="col-md-6 col-lg-4">
             <a class="deal" href="<?=get_the_permalink()?>">
-                <div class="deal__header">
-                    <img class="deal__logo" src="<?=get_stylesheet_directory_uri()?>/img/firma-logo.svg" alt="" width=100 height=100>
-                    <div class="deal__intro">Financial Intermediary For</div>
-                </div>
-                <div class="deal__info">
-                    <div class="deal__title"><?=get_field('deal_title')?></div>
-                    <div class="deal__value">&pound;<?=number_format(get_field('deal_value'))?></div>
-                    <div class="deal__description_pre"><?=get_field('description_pre_title')?></div>
-                    <div class="deal__description"><?=get_field('description')?></div>
-                    <div class="deal__finance_pre"><?=get_field('finance_pre_title')?></div>
-                    <div class="deal__finance"><?=get_field('finance_detail')?></div>
+                <div class="deal__inner">
+                    <div class="deal__header">
+                        <img class="deal__logo" src="<?=get_stylesheet_directory_uri()?>/img/firma-logo.svg" alt="" width=100 height=100>
+                        <div class="deal__intro">Financial Intermediary For</div>
+                    </div>
+                    <div class="deal__info">
+                        <div class="deal__title"><?=get_field('deal_title')?></div>
+                        <div class="deal__value">&pound;<?=number_format(get_field('deal_value'))?></div>
+                        <div class="deal__description_pre"><?=get_field('description_pre_title')?></div>
+                        <div class="deal__description"><?=get_field('description')?></div>
+                        <div class="deal__finance_pre"><?=get_field('finance_pre_title')?></div>
+                        <div class="deal__finance"><?=get_field('finance_detail')?></div>
+                    </div>
                 </div>
             </a>
         </div>

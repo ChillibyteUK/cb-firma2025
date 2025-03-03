@@ -14,8 +14,9 @@ $col-secondary: #e9988e;
     // --col-accent-400: #E9DE6C; // straw
     --hsl-accent-400: 55 74% 67%;
     --col-accent-400: hsl(var(--hsl-accent-400));
-
-    --col-accent-100: hsl(var(--hsl-accent-400) / 0.2);
+    
+    --hsl-accent-100: 55 74% 85%;
+    --col-accent-100: hsl(var(--hsl-accent-100));
 
     // --col-silk-400: #bcb299;
     --hsl-silk-400: 43 21% 67%;
