@@ -19,32 +19,23 @@
                     ?>
             </div>
             <div class="col-lg-6">
-                <div class="cards__grid" data-aos="fade">
-                    <?php
-                        $active = 'active';
-                    while(have_rows('services')) {
-                        the_row();
-                        $s = acf_slugify(get_sub_field('service_name'));
-                        ?>
-                    <div class="card <?=$active?>">
-                        <div class="card__title">
-                            <?=get_sub_field('service_name')?>
-                        </div>
-                        <div class="card__content <?=$active?>">
-                            <div>
-                                <img src="<?=get_stylesheet_directory_uri()?>/img/icon--<?=$s?>.svg"
-                                    alt="">
-                                <?=get_sub_field('content')?>
-                            </div>
-                            <div class="card__link"><a
-                                    href="<?=get_sub_field('link')['url']?>">Find
-                                    out more</a></div>
-                        </div>
+                <div class="row g-5">
+                <?php
+                while(have_rows('services')) {
+                    the_row();
+                    $s = acf_slugify(get_sub_field('service_name'));
+                    ?>
+                    <div class="col-md-6">
+                        <a href="<?=get_sub_field('link')['url']?>" class="services_feature__card">
+                            <img src="<?=get_stylesheet_directory_uri()?>/img/icon--<?=$s?>.svg" class="services_feature__icon" alt="<?=get_sub_field('service_name')?>">
+                            <h3><?=get_sub_field('service_name')?></h3>
+                            <p><?=get_sub_field('content')?></p>
+                            <div class="services_feature__link">Find out more</div>
+                        </a>
                     </div>
                     <?php
-                        $active = '';
-                    }
-                    ?>
+                }
+                ?>
                 </div>
             </div>
         </div>
