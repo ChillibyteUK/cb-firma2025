@@ -21051,7 +21051,7 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: var(--fs-200);
+  font-size: var(--fs-100);
 }
 .footer .colophon__links {
   align-items: center;
@@ -21950,43 +21950,19 @@ a.anchor {
   margin-right: 0.75rem;
 }
 
-main ul:not(.slick-dots, .fa-ul) {
+main ul:not(.splide__list, .fa-ul) {
   list-style: none;
   padding-left: 1.5rem;
 }
-main ul:not(.slick-dots, .fa-ul) li {
+main ul:not(.splide__list, .fa-ul) li {
   margin-bottom: 0.5rem;
 }
-main ul:not(.slick-dots, .fa-ul) li::before {
+main ul:not(.splide__list, .fa-ul) li::before {
   content: "■";
   color: var(--col-accent-400);
   display: inline-block;
   width: 1.5rem;
   margin-left: -1.5rem;
-}
-
-.slick-dots {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 1rem 0;
-  list-style-type: none;
-}
-.slick-dots li {
-  margin: 0 0.25rem;
-}
-.slick-dots button {
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  padding: 0;
-  border: none;
-  border-radius: 100%;
-  background-color: var(--col-grey-800);
-  text-indent: -9999px;
-}
-.slick-dots li.slick-active button {
-  background-color: var(--col-grey-900);
 }
 
 /*

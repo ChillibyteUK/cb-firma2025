@@ -122,7 +122,7 @@ a.anchor {
     }
 }
 
-main ul:not(.slick-dots,.fa-ul) {
+main ul:not(.splide__list,.fa-ul) {
     list-style: none;
     padding-left: 1.5rem;
     li {
@@ -137,33 +137,33 @@ main ul:not(.slick-dots,.fa-ul) {
     }
 }
 
-.slick-dots {
-	display: flex;
-	justify-content: center;
+// .slick-dots {
+// 	display: flex;
+// 	justify-content: center;
 	
-	margin: 0;
-	padding: 1rem 0;
-	list-style-type: none;
-    li {
-        margin: 0 0.25rem;
-    }
+// 	margin: 0;
+// 	padding: 1rem 0;
+// 	list-style-type: none;
+//     li {
+//         margin: 0 0.25rem;
+//     }
 	
-    button {
-        display: block;
-        width: 0.5rem;
-        height: 0.5rem;
-        padding: 0;
+//     button {
+//         display: block;
+//         width: 0.5rem;
+//         height: 0.5rem;
+//         padding: 0;
         
-        border: none;
-        border-radius: 100%;
-        background-color: var(--col-grey-800);
+//         border: none;
+//         border-radius: 100%;
+//         background-color: var(--col-grey-800);
         
-        text-indent: -9999px;
-    }
-    li.slick-active button {
-        background-color: var(--col-grey-900);
-    }
-}
+//         text-indent: -9999px;
+//     }
+//     li.slick-active button {
+//         background-color: var(--col-grey-900);
+//     }
+// }
 
 // show stuff that overflows horizontally
 // * {

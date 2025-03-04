@@ -10,7 +10,7 @@ $content = get_field('content') ?: 'Get in touch with use today and let\'s craft
             <div class="col-lg-6">
                 <h2 class="underline mb-4"><?=$title?></h2>
             </div>
-            <div class="col-lg-6" data-aos="fade-in-right">
+            <div class="col-lg-6" data-aos="fade-left">
                 <div class="mb-4"><?=$content?></div>
                 <a href="<?=$l['url']?>" class="wp-block-button__link"><?=$l['title']?></a>
             </div>
