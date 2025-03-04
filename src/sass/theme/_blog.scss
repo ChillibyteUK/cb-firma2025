@@ -44,10 +44,24 @@
     }
     &__image {
         clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
-        aspect-ratio: 16 / 9;
-        width: 100%;
-        object-fit: cover;
         margin-bottom: 1rem;
+        position: relative;
+        img {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url(../img/hero-overlay.svg);
+            background-size: auto;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            mix-blend-mode: multiply;
+        }
     }
     .sidebar {
         position: sticky;
@@ -67,7 +81,7 @@
             margin-bottom: 0.5rem;
         }
         &__title {
-            font-size: var(--fs-500);
+            font-size: var(--fs-400);
             margin-bottom: 0.25rem;
         }
         &__date {

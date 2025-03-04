@@ -1,0 +1,50 @@
+.latest_insights {
+    background-color: var(--col-primary-400);
+    color: white;
+
+    &__card {
+        background-color: white;
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
+        transition: border-color var(--transition), background-color var(--transition);
+        height: 100%;
+        &:hover {
+            background-color: var(--col-accent-400);
+        }
+    }
+    &__inner {
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
+        background-color: white;
+        height: 100%;
+    }
+    &__image {
+        position: relative;
+        margin-bottom: 0.5rem;
+        img {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url(../img/hero-overlay.svg);
+            background-size: auto;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            mix-blend-mode: multiply;
+        }
+    }
+    &__title {
+        font-size: var(--fs-300);
+        font-weight: var(--fw-600);
+        padding-inline: 0.5rem;
+        margin-bottom: 0;
+        padding-bottom: 0.5rem;
+    }
+
+}

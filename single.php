@@ -2,7 +2,6 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 get_header();
-$img = get_the_post_thumbnail_url(get_the_ID(),'full');
 ?>
 <main id="main" class="single_blog">
     <?php
@@ -21,7 +20,9 @@ $img = get_the_post_thumbnail_url(get_the_ID(),'full');
     <div class="container-xl">
         <div class="row g-4 pb-4">
             <div class="col-lg-9">
-                <img src="<?=$img?>" alt="" class="single_blog__image">
+                <div class="single_blog__image">
+                    <?=get_the_post_thumbnail(get_the_ID(),'full')?>
+                </div>
                 <h1 class="single_blog__title"><?=get_the_title()?></h1>
                 <?php
                 $count = estimate_reading_time_in_minutes( get_the_content(), 200, true, true );

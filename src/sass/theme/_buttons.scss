@@ -5,8 +5,8 @@
 .wp-block-button__link {
     position: relative;
     font-family: var(--ff-title);
-    font-weight: var(--fw-400);
-    font-size: var(--fs-300) !important;
+    font-weight: var(--fw-600);
+    font-size: var(--fs-200) !important;
 
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -37,4 +37,16 @@
         background-color: color-mix(in srgb, var(--col-primary-400), #ffffff 10%);
         transform: translateY(2px);
     }
+
+    &--wo {
+        background-color: white;
+        color: var(--col-primary-400);
+        &:hover {
+            color: var(--col-primary-400);
+            background-color: color-mix(in srgb, #ffffff, var(--col-primary-400) 10%);
+            transform: translateY(2px);
+        }
+    }
+
 }
+
