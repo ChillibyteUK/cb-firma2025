@@ -118,18 +118,21 @@
 }
 
 .related {
-    background-color: var(--col-silk-400);
     &__card {
-        border: 10px solid var(--col-primary-400);
-        background-color: white;
+        background-color: var(--col-primary-400);
         text-decoration: none;
         display: block;
+        padding: 5px;
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
         transition: border-color var(--transition), background-color var(--transition);
         &:hover {
-            border-color: var(--col-accent-400);
             color: var(--col-primary-400);
-            background-color: var(--col-accent-100);
+            background-color: var(--col-accent-400);
         }
+    }
+    &__inner {
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
+        background-color: white;
     }
     &__image {
         position: relative;

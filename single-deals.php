@@ -56,10 +56,12 @@ $img = get_the_post_thumbnail_url(get_the_ID(),'full');
                     ?>
                     <div class="col-md-6 col-xl-3">
                         <a class="related__card" href="<?=get_the_permalink()?>">
-                            <div class="related__image">
-                                <?=get_the_post_thumbnail($r->ID,'medium')?>
+                            <div class="related__inner">
+                                <div class="related__image">
+                                    <?=get_the_post_thumbnail($r->ID,'medium')?>
+                                </div>
+                                <div class="related__title p-2"><?=get_the_title()?></div>
                             </div>
-                            <div class="related__title p-2"><?=get_the_title()?></div>
                         </a>
                     </div>
                     <?php
