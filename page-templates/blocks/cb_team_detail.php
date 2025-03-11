@@ -2,7 +2,7 @@
 $teams = get_field('team');
 ?>
 <section class="team_detail">
-    <div class="container-xl py-5">
+    <div class="container-xl pt-4 pb-5">
         <?php
         $args = array(
             'post_type' => 'people',
