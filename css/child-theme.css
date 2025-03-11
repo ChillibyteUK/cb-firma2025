@@ -21695,6 +21695,9 @@ body .gform_wrapper .gform_footer button {
   font-size: var(--fs-100);
 }
 
+.team_detail__row:hover .team_detail__image {
+  filter: grayscale(0);
+}
 .team_detail__image {
   display: block;
   aspect-ratio: 4/5;
@@ -21705,6 +21708,8 @@ body .gform_wrapper .gform_footer button {
   object-position: center;
   max-width: 300px;
   margin-inline: auto;
+  filter: grayscale(1);
+  transition: filter var(--transition);
 }
 .team_detail__name {
   font-size: var(--fs-600);

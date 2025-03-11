@@ -1,4 +1,11 @@
 .team_detail {
+    &__row {
+        &:hover {
+            .team_detail__image {
+                filter: grayscale(0);
+            }
+        }
+    }
     &__image {
         display: block;
         aspect-ratio: 4 / 5;
@@ -7,6 +14,8 @@
         object-position: center;
         max-width: 300px;
         margin-inline: auto;
+        filter: grayscale(1);
+        transition: filter var(--transition);
     }
     &__name {
         font-size: var(--fs-600);
