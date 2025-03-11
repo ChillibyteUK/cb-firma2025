@@ -21688,11 +21688,11 @@ body .gform_wrapper .gform_footer button {
   transition: filter var(--transition);
 }
 .team_slider__name {
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
   margin-bottom: 0;
 }
 .team_slider__role {
-  font-size: var(--fs-200);
+  font-size: var(--fs-100);
 }
 
 .team_detail__image {
