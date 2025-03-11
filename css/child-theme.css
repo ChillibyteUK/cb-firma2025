@@ -21697,7 +21697,7 @@ body .gform_wrapper .gform_footer button {
 
 .team_detail__image {
   display: block;
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/5;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -21707,7 +21707,7 @@ body .gform_wrapper .gform_footer button {
   margin-inline: auto;
 }
 .team_detail__name {
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
   margin-bottom: 0;
 }
 .team_detail__role {

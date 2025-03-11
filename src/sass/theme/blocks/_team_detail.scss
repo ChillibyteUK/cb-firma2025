@@ -1,7 +1,7 @@
 .team_detail {
     &__image {
         display: block;
-        aspect-ratio: 3 / 4;
+        aspect-ratio: 4 / 5;
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -9,7 +9,7 @@
         margin-inline: auto;
     }
     &__name {
-        font-size: var(--fs-700);
+        font-size: var(--fs-600);
         margin-bottom: 0;
     }
     &__role {
