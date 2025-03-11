@@ -5,6 +5,8 @@ $pattern = !empty(get_field('pattern')[0]) ?: '';
 $pbg = $pattern ? ($background == 'Blue' ? 'has-tile-bg has-tile-bg--wo has-tile-bg--right' : 'has-tile-bg has-tile-bg--right') : null;
 $device = !empty(get_field('device')[0]) ?: '';
 
+$class = $block['className'] ?? 'py-5';
+
 $text = '';
 $dd = 'device-primary.svg';
 // $pbg = $pattern ?
@@ -17,7 +19,7 @@ if ($background == 'Blue') {
 
 ?>
 <section class="feature_section <?=$background?> <?=$pbg?>">
-    <div class="container-xl py-5">
+    <div class="container-xl <?=$class?>">
         <div class="row g-5">
             <div class="col-md-6">
                 <?php
@@ -41,7 +43,7 @@ if ($background == 'Blue') {
                     </h2>
                     <?php
                 }
-                ?>
+?>
             </div>
             <div class="col-md-6 <?=$text?>" data-aos="fade">
                 <?=get_field('content')?>
