@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-6 contact__container">
                 <?=wp_get_attachment_image(get_field('image'), 'full', false, ['class' => 'contact__image'])?>
-                <div class="contact__overlay"></div>
+                <!-- <div class="contact__overlay"></div> -->
             </div>
             <div class="col-12 col-md-8 offset-md-2">
                 <h2>Send a Message</h2>
