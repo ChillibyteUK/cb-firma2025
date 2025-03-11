@@ -2,7 +2,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-$img = wp_get_attachment_image_url(get_field('recent_deals_hero','options'), 'full');// ?? null;
+$img = wp_get_attachment_image_url(get_field('recent_deals_hero', 'options'), 'full');// ?? null;
 
 get_header();
 ?>
@@ -11,7 +11,7 @@ get_header();
     <div class="container-xl d-flex flex-column justify-content-center">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="">
+                <h1 data-aos="fade">
                     Recent Deals
                 </h1>
             </div>
@@ -49,7 +49,7 @@ get_header();
     </div>
     <?php
         get_template_part('page-templates/blocks/cb_bg_cta');
-        ?>
+?>
 </main>
 <?php
 get_footer();

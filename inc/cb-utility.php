@@ -45,62 +45,88 @@ add_shortcode('contact_email_icon', function () {
     }
     return;
 });
-add_shortcode('social_fb_icon', function () {
-    $social = get_field('social', 'options');
-    $fburl = $social['facebook_url'];
-    if ($fburl != '') {
-        return '<a href="' . $fburl . '" target="_blank"><i class="fa-brands fa-facebook"></i></a>';
+
+
+// Generate individual social icon shortcodes
+function cb_social_icon_shortcode($atts)
+{
+    $atts = shortcode_atts(['type' => ''], $atts);
+    if (!$atts['type']) {
+        return '';
     }
-    return;
-});
-add_shortcode('social_ig_icon', function () {
-    $social = get_field('social', 'options');
-    $igurl = $social['instagram_url'];
-    if ($igurl != '') {
-        return '<a href="' . $igurl . '" target="_blank"><i class="fa-brands fa-instagram"></i></a>';
+
+    $social = get_field('social', 'option');
+    $urls = [
+        'facebook'  => $social['facebook_url'] ?? '',
+        'instagram' => $social['instagram_url'] ?? '',
+        'twitter'   => $social['twitter_url'] ?? '',
+        'pinterest' => $social['pinterest_url'] ?? '',
+        'youtube'   => $social['youtube_url'] ?? '',
+        'linkedin'  => $social['linkedin_url'] ?? '',
+    ];
+
+    // Define preferred icons for each social type
+    $social_map = [
+        'facebook'  => 'facebook-f',  // Change to 'facebook' if preferred
+        'instagram' => 'instagram',
+        'twitter'   => 'x-twitter',   // Change to 'twitter' if preferred
+        'pinterest' => 'pinterest',
+        'youtube'   => 'youtube',
+        'linkedin'  => 'linkedin-in', // Change to 'linkedin' if preferred
+    ];
+
+    if (!isset($urls[$atts['type']]) || empty($urls[$atts['type']])) {
+        return '';
     }
-    return;
-});
-add_shortcode('social_tw_icon', function () {
-    $social = get_field('social', 'options');
-    $twurl = $social['twitter_url'];
-    if ($twurl != '') {
-        return '<a href="' . $twurl . '" target="_blank"><i class="fa-brands fa-twitter"></i></a>';
+
+    $url = esc_url($urls[$atts['type']]);
+    $icon = $social_map[$atts['type']] ?? esc_attr($atts['type']); // Use mapped icon or fallback to type
+
+    return '<a href="' . $url . '" target="_blank" rel="nofollow noopener noreferrer"><i class="fa-brands fa-' . $icon . '"></i></a>';
+}
+
+// Register individual social icon shortcodes
+$social_types = ['facebook', 'instagram', 'twitter', 'pinterest', 'youtube', 'linkedin'];
+foreach ($social_types as $type) {
+    add_shortcode('social_' . $type . '_icon', function () use ($type) {
+        return cb_social_icon_shortcode(['type' => $type]);
+    });
+}
+
+// Generate a single shortcode to output all social icons
+add_shortcode('social_icons', function ($atts) {
+    $atts = shortcode_atts([
+        'class' => '',
+    ], $atts, 'social_icons');
+
+    $social = get_field('social', 'option');
+
+    if (!$social) {
+        return '';
     }
-    return;
-});
-add_shortcode('social_pt_icon', function () {
-    $social = get_field('social', 'options');
-    $pturl = $social['pinterest_url'];
-    if ($pturl != '') {
-        return '<a href="' . $pturl . '" target="_blank"><i class="fa-brands fa-pinterest"></i></a>';
+
+    $icons = [];
+    $social_map = [
+        'facebook'  => 'facebook-f',
+        'instagram' => 'instagram',
+        'twitter'   => 'x-twitter',
+        'pinterest' => 'pinterest',
+        'youtube'   => 'youtube',
+        'linkedin'  => 'linkedin-in',
+    ];
+
+    foreach ($social_map as $key => $icon) {
+        if (!empty($social[$key . '_url'])) {
+            $url = esc_url($social[$key . '_url']);
+            $icons[] = '<a href="' . $url . '" target="_blank" rel="nofollow noopener noreferrer"><i class="fa-brands fa-' . $icon . '"></i></a>';
+        }
     }
-    return;
+
+    $class = esc_attr(trim($atts['class']));
+
+    return !empty($icons) ? '<div class="social-icons ' . $class . '">' . implode(' ', $icons) . '</div>' : '';
 });
-add_shortcode('social_yt_icon', function () {
-    $social = get_field('social', 'options');
-    $yturl = $social['youtube_url'];
-    if ($yturl != '') {
-        return '<a href="' . $yturl . '" target="_blank"><i class="fa-brands fa-youtube"></i></a>';
-    }
-    return;
-});
-add_shortcode('social_in_icon', function () {
-    $social = get_field('social', 'options');
-    $inurl = $social['linkedin_url'];
-    if ($inurl != '') {
-        return '<a href="' . $inurl . '" target="_blank"><i class="fa-brands fa-linkedin"></i></a>';
-    }
-    return;
-});
-add_shortcode('social_gp_icon', function () {
-    $social = get_field('social', 'options');
-    $gpurl = $social['google_url'];
-    if ($gpurl != '') {
-        return '<a href="' . $gpurl . '" target="_blank"><i class="fas fa-globe-americas"></i></a>';
-    }
-    return;
-});
+
 
 
 /**
@@ -114,11 +140,11 @@ function get_vimeo_data_from_id($video_id, $data)
 {
     // width can be 100, 200, 295, 640, 960 or 1280
     $request = wp_remote_get('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' . $video_id . '&width=960');
-    
+
     $response = wp_remote_retrieve_body($request);
-    
+
     $video_array = json_decode($response, true);
-    
+
     // return $video_array;
     return $video_array[$data];
 }
@@ -245,7 +271,7 @@ function random_str(
     $pieces = [];
     $max = mb_strlen($keyspace, '8bit') - 1;
     for ($i = 0; $i < $length; ++$i) {
-        $pieces []= $keyspace[random_int(0, $max)];
+        $pieces [] = $keyspace[random_int(0, $max)];
     }
     return implode('', $pieces);
 }
@@ -268,7 +294,7 @@ function cb_social_share($id)
         class="px-2"><i class='fa-brands fa-facebook-f'></i></a>
 </div>
 <?php
-    
+
     $out = ob_get_clean();
     return $out;
 }
@@ -372,15 +398,15 @@ add_action('init', 'myprefix_unregister_tags');
 add_action('admin_init', function () {
     // Redirect any user trying to access comments page
     global $pagenow;
-     
+
     if ($pagenow === 'edit-comments.php') {
         wp_safe_redirect(admin_url());
         exit;
     }
- 
+
     // Remove comments metabox from dashboard
     remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
- 
+
     // Disable support for comments and trackbacks in post types
     foreach (get_post_types() as $post_type) {
         if (post_type_supports($post_type, 'comments')) {
@@ -430,21 +456,21 @@ function estimate_reading_time_in_minutes($content = '', $words_per_minute = 300
 
         $content = $contentHtml;
     }
-            
+
     // Remove HTML tags from string
     $content = wp_strip_all_tags($content);
-            
+
     // When content is empty return 0
     if (!$content) {
         return 0;
     }
-            
+
     // Count words containing string
     $words_count = str_word_count($content);
-            
+
     // Calculate time for read all words and round
     $minutes = ceil($words_count / $words_per_minute);
-    
+
     if ($formatted) {
         $minutes = '<p class="reading">Estimated reading time ' . $minutes . ' ' . pluralise($minutes, 'minute') . '</p>';
     }
@@ -452,17 +478,17 @@ function estimate_reading_time_in_minutes($content = '', $words_per_minute = 300
     return $minutes;
 }
 
-function pluralise($quantity, $singular, $plural=null)
+function pluralise($quantity, $singular, $plural = null)
 {
-    if($quantity==1 || !strlen($singular)) {
+    if ($quantity == 1 || !strlen($singular)) {
         return $singular;
     }
-    if($plural!==null) {
+    if ($plural !== null) {
         return $plural;
     }
 
-    $last_letter = strtolower($singular[strlen($singular)-1]);
-    switch($last_letter) {
+    $last_letter = strtolower($singular[strlen($singular) - 1]);
+    switch ($last_letter) {
         case 'y':
             return substr($singular, 0, -1).'ies';
         case 's':

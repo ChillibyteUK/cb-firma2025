@@ -22,6 +22,7 @@ defined('ABSPATH') || exit;
                     </li>
                     <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span><?=get_field('contact_address', 'options')?></li>
                 </ul>
+                <?=do_shortcode('[social_icons class="fs-500"]')?>
             </div>
             <div class="col-sm-6 col-lg-3 mb-2 order-4 order-lg-3 pt-4">
                 <div class="footer__title">Services</div>
