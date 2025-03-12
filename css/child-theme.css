@@ -21947,7 +21947,7 @@ body .gform_wrapper .gform_footer button {
 .video_hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0 0 -1px 0;
   background: linear-gradient(45deg, hsl(var(--hsl-primary-400)/1) 20%, transparent);
   background-size: auto;
   background-position: right bottom;
