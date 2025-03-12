@@ -1,0 +1,47 @@
+.video_hero {
+    min-height: calc( 500px + var(--h-top) );
+    padding-top: var(--h-top);
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    margin-bottom: -2px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, hsl(var(--hsl-primary-400) / 1) 20%, transparent);
+        background-size: auto;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+    }
+
+    .container-xl {
+        isolation: isolate;
+        position: relative;
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    h1 {
+        color: #fff;
+        line-height: 1.1;
+        text-align: start;
+        text-wrap: balance;
+    }
+}
