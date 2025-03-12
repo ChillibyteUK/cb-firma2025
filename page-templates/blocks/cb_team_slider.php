@@ -11,19 +11,6 @@
                             Meet the Team
                         </h2>
                         <div data-aos="fade">
-                            <p><section class="team_slider py-5">
-    <div class="container-xl">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="row g-4">
-                    <div class="col-2">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/img/device-primary.svg" alt="">
-                    </div>
-                    <div class="col-10">
-                        <h2 class="mb-4 underline">
-                            Meet the Team
-                        </h2>
-                        <div data-aos="fade">
                             <p><?= get_field('content') ?></p>
                             <a class="wp-block-button__link" href="/our-team/">Find out more</a>
                         </div>
