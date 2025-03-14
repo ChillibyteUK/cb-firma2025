@@ -19,6 +19,27 @@
             "message": "",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_67d1c420e7d2d",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
