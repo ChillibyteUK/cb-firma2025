@@ -1,11 +1,11 @@
 .team_detail {
-    &__row {
-        &:hover {
-            .team_detail__image {
-                filter: grayscale(0);
-            }
-        }
-    }
+    // &__row {
+    //     &:hover {
+    //         .team_detail__image {
+    //             filter: grayscale(0);
+    //         }
+    //     }
+    // }
     &__image {
         display: block;
         aspect-ratio: 4 / 5;

@@ -21666,9 +21666,6 @@ body .gform_wrapper .gform_footer button {
   padding-inline: 0.5rem;
   cursor: pointer;
 }
-.team_slider__card:hover .team_slider__image {
-  filter: grayscale(0);
-}
 .team_slider__card_inner {
   margin-inline: 0.25rem;
   border: 1px solid var(--col-grey-400);
@@ -21695,9 +21692,6 @@ body .gform_wrapper .gform_footer button {
   font-size: var(--fs-100);
 }
 
-.team_detail__row:hover .team_detail__image {
-  filter: grayscale(0);
-}
 .team_detail__image {
   display: block;
   aspect-ratio: 4/5;

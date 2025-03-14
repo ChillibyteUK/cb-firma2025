@@ -2,11 +2,11 @@
     &__card {
         padding-inline: 0.5rem;
         cursor: pointer;
-        &:hover {
-            .team_slider__image {
-                filter: grayscale(0);
-            }
-        }
+        // &:hover {
+        //     .team_slider__image {
+        //         filter: grayscale(0);
+        //     }
+        // }
     }
     &__card_inner {
         margin-inline:0.25rem;

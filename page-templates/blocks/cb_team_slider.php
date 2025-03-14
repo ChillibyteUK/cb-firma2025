@@ -26,9 +26,9 @@
                                 'post_type' => 'people',
                                 'posts_per_page' => -1
                             ));
-                            while ($q->have_posts()) {
-                                $q->the_post();
-                                $slug = acf_slugify(get_the_title());
+                        while ($q->have_posts()) {
+                            $q->the_post();
+                            $slug = acf_slugify(get_the_title());
                             ?>
                                 <li class="team_slider__card splide__slide">
                                     <a href="/our-team/#<?= $slug ?>">
@@ -40,9 +40,9 @@
                                     </a>
                                 </li>
                             <?php
-                            }
-                            wp_reset_postdata();
-                            ?>
+                        }
+                        wp_reset_postdata();
+                        ?>
                         </ul>
                     </div>
                 </div>
@@ -53,14 +53,14 @@
 
 <?php
 add_action('wp_footer', function () {
-?>
+    ?>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function() {
             new Splide('.team_slider__slider', {
                 type: 'loop',
                 perPage: 3, // Show 3 slides at a time
                 perMove: 1, // Move 1 slide per scroll
-                autoplay: true,
+                autoplay: false,
                 pauseOnHover: true,
                 pagination: false, // Show dots
                 arrows: false, // Hide next/prev buttons
