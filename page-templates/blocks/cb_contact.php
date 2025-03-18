@@ -26,10 +26,6 @@
                 <?=wp_get_attachment_image(get_field('image'), 'full', false, ['class' => 'contact__image'])?>
                 <!-- <div class="contact__overlay"></div> -->
             </div>
-            <div class="col-12 col-md-8 offset-md-2">
-                <h2>Send a Message</h2>
-                <?=do_shortcode('[gravityform id="' . get_field('form_id') . '" title="false"]')?>
-            </div>
         </div>
     </div>
 </section>
