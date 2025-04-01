@@ -35,8 +35,6 @@
 
 							$team = get_field( 'teams' );
 
-							print_r( $team );
-
 							$args = array(
 								'post_type'      => 'people',
 								'posts_per_page' => -1,

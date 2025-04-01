@@ -112,7 +112,7 @@ add_shortcode('social_icons', function ($atts) {
         'twitter'   => 'x-twitter',
         'pinterest' => 'pinterest',
         'youtube'   => 'youtube',
-        'linkedin'  => 'linkedin-in',
+        'linkedin'  => 'linkedin',
     ];
 
     foreach ($social_map as $key => $icon) {
