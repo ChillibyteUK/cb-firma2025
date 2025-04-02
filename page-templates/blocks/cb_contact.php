@@ -23,10 +23,8 @@
                 </div>
             </div>
             <div class="col-md-6 contact__container">
-                <?=wp_get_attachment_image(get_field('image'), 'full', false, ['class' => 'contact__image'])?>
-                <!-- <div class="contact__overlay"></div> -->
-            </div>
+				<iframe src="<?=get_field('maps_url', 'options')?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	        </div>
         </div>
     </div>
 </section>
-<iframe src="<?=get_field('maps_url', 'options')?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
