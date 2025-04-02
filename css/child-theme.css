@@ -21970,6 +21970,39 @@ body .gform_wrapper .gform_footer button {
   text-wrap: balance;
 }
 
+.file_list__card {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  height: 100%;
+  display: block;
+  transition: background-color var(--transition);
+  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+  clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+  background-color: var(--col-primary-400);
+}
+.file_list__inner {
+  transition: background-color var(--transition);
+  background-color: white;
+  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+  clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+  height: 100%;
+  padding: 2rem 1rem 1rem 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 0.5rem;
+}
+.file_list__image {
+  margin-inline: auto;
+}
+.file_list__card:hover {
+  background-color: var(--col-accent-400);
+  color: var(--col-primary-400);
+}
+.file_list__card:hover .file_list__inner {
+  background-color: var(--col-accent-100);
+}
+
 body {
   color: var(--body-color);
 }

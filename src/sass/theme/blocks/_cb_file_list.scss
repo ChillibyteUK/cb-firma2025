@@ -1,0 +1,37 @@
+.file_list {
+    &__card {
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        height: 100%;
+        display: block;
+        transition: background-color var(--transition);
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+
+        background-color: var(--col-primary-400);
+    }
+    &__inner {
+        transition: background-color var(--transition);
+        background-color: white;
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+        height: 100%;
+        padding: 2rem 1rem 1rem 1rem;
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        row-gap: 0.5rem;
+    }
+
+    &__image {
+        margin-inline: auto;
+    }
+
+    &__card:hover {
+        background-color: var(--col-accent-400);
+        color: var(--col-primary-400);
+        .file_list__inner {
+            background-color: var(--col-accent-100);
+        }
+    }
+
+}
