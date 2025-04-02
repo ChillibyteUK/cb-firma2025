@@ -202,10 +202,8 @@ p {
 
 abbr[title],
 abbr[data-bs-original-title] {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -494,10 +492,6 @@ legend + * {
 
 ::-webkit-color-swatch-wrapper {
   padding: 0;
-}
-
-::-webkit-file-upload-button {
-  font: inherit;
 }
 
 ::file-selector-button {
@@ -2244,8 +2238,6 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2296,14 +2288,6 @@ progress {
 .widget_archive select::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::-moz-placeholder, .gform_wrapper.gravity-theme input[type=text]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=email]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=tel]::-moz-placeholder, .gform_wrapper.gravity-theme input[type=number]::-moz-placeholder, .gform_wrapper.gravity-theme textarea::-moz-placeholder, .widget_categories select::-moz-placeholder, .widget_archive select::-moz-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-.form-control:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=text]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=email]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=tel]:-ms-input-placeholder, .gform_wrapper.gravity-theme input[type=number]:-ms-input-placeholder, .gform_wrapper.gravity-theme textarea:-ms-input-placeholder, .widget_categories select:-ms-input-placeholder, .widget_archive select:-ms-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
 .form-control::placeholder, .gform_wrapper.gravity-theme input[type=text]::placeholder,
 .gform_wrapper.gravity-theme input[type=email]::placeholder,
 .gform_wrapper.gravity-theme input[type=tel]::placeholder,
@@ -2327,22 +2311,6 @@ progress {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=text]::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=email]::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=tel]::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=number]::-webkit-file-upload-button, .gform_wrapper.gravity-theme textarea::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button, .widget_archive select::-webkit-file-upload-button {
-  padding: 0.375rem 0.75rem;
-  margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
-  color: #212529;
-  background-color: #e9ecef;
-  pointer-events: none;
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-  border-inline-end-width: 1px;
-  border-radius: 0;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
 .form-control::file-selector-button, .gform_wrapper.gravity-theme input[type=text]::file-selector-button,
 .gform_wrapper.gravity-theme input[type=email]::file-selector-button,
 .gform_wrapper.gravity-theme input[type=tel]::file-selector-button,
@@ -2351,7 +2319,6 @@ progress {
 .widget_archive select::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #212529;
   background-color: #e9ecef;
@@ -2364,10 +2331,6 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=text]::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=email]::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=tel]::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=number]::-webkit-file-upload-button, .gform_wrapper.gravity-theme textarea::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button, .widget_archive select::-webkit-file-upload-button {
-    -webkit-transition: none;
-    transition: none;
-  }
   .form-control::file-selector-button, .gform_wrapper.gravity-theme input[type=text]::file-selector-button,
 .gform_wrapper.gravity-theme input[type=email]::file-selector-button,
 .gform_wrapper.gravity-theme input[type=tel]::file-selector-button,
@@ -2376,9 +2339,6 @@ progress {
 .widget_archive select::file-selector-button {
     transition: none;
   }
-}
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=text]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=email]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=tel]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .gform_wrapper.gravity-theme input[type=number]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .gform_wrapper.gravity-theme textarea:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .widget_categories select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .widget_archive select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #dde0e3;
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button, .gform_wrapper.gravity-theme input[type=text]:hover:not(:disabled):not([readonly])::file-selector-button,
 .gform_wrapper.gravity-theme input[type=email]:hover:not(:disabled):not([readonly])::file-selector-button,
@@ -2396,7 +2356,6 @@ progress {
 .widget_archive select::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #212529;
   background-color: #e9ecef;
@@ -2406,7 +2365,6 @@ progress {
   border-width: 0;
   border-inline-end-width: 1px;
   border-radius: 0;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2416,7 +2374,6 @@ progress {
 .gform_wrapper.gravity-theme input[type=number]::-webkit-file-upload-button,
 .gform_wrapper.gravity-theme textarea::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button,
 .widget_archive select::-webkit-file-upload-button {
-    -webkit-transition: none;
     transition: none;
   }
 }
@@ -2451,22 +2408,14 @@ progress {
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
-.form-control-sm::-webkit-file-upload-button {
-  padding: 0.25rem 0.5rem;
-  margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-}
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 .form-control-sm::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 
@@ -2476,22 +2425,14 @@ progress {
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
-.form-control-lg::-webkit-file-upload-button {
-  padding: 0.5rem 1rem;
-  margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
-  margin-inline-end: 1rem;
-}
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
 }
 .form-control-lg::-webkit-file-upload-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
 }
 
@@ -2540,8 +2481,6 @@ textarea.form-control-lg {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2603,10 +2542,7 @@ textarea.form-control-lg {
   background-position: center;
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-print-color-adjust: exact;
   color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
@@ -2692,8 +2628,6 @@ textarea.form-control-lg {
   height: 1.5rem;
   padding: 0;
   background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .form-range:focus {
@@ -2715,14 +2649,11 @@ textarea.form-control-lg {
   background-color: #0d6efd;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-webkit-slider-thumb {
-    -webkit-transition: none;
     transition: none;
   }
 }
@@ -2744,14 +2675,11 @@ textarea.form-control-lg {
   background-color: #0d6efd;
   border: 0;
   border-radius: 1rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-moz-range-thumb {
-    -moz-transition: none;
     transition: none;
   }
 }
@@ -2815,12 +2743,6 @@ textarea.form-control-lg {
 .widget_archive .form-floating > select {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::-moz-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=text]::-moz-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=email]::-moz-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=tel]::-moz-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=number]::-moz-placeholder, .gform_wrapper.gravity-theme .form-floating > textarea::-moz-placeholder, .widget_categories .form-floating > select::-moz-placeholder, .widget_archive .form-floating > select::-moz-placeholder {
-  color: transparent;
-}
-.form-floating > .form-control:-ms-input-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=text]:-ms-input-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=email]:-ms-input-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=tel]:-ms-input-placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=number]:-ms-input-placeholder, .gform_wrapper.gravity-theme .form-floating > textarea:-ms-input-placeholder, .widget_categories .form-floating > select:-ms-input-placeholder, .widget_archive .form-floating > select:-ms-input-placeholder {
-  color: transparent;
-}
 .form-floating > .form-control::placeholder, .gform_wrapper.gravity-theme .form-floating > input[type=text]::placeholder,
 .gform_wrapper.gravity-theme .form-floating > input[type=email]::placeholder,
 .gform_wrapper.gravity-theme .form-floating > input[type=tel]::placeholder,
@@ -2828,14 +2750,6 @@ textarea.form-control-lg {
 .gform_wrapper.gravity-theme .form-floating > textarea::placeholder, .widget_categories .form-floating > select::placeholder,
 .widget_archive .form-floating > select::placeholder {
   color: transparent;
-}
-.form-floating > .form-control:not(:-moz-placeholder-shown), .gform_wrapper.gravity-theme .form-floating > input[type=text]:not(:-moz-placeholder-shown), .gform_wrapper.gravity-theme .form-floating > input[type=email]:not(:-moz-placeholder-shown), .gform_wrapper.gravity-theme .form-floating > input[type=tel]:not(:-moz-placeholder-shown), .gform_wrapper.gravity-theme .form-floating > input[type=number]:not(:-moz-placeholder-shown), .gform_wrapper.gravity-theme .form-floating > textarea:not(:-moz-placeholder-shown), .widget_categories .form-floating > select:not(:-moz-placeholder-shown), .widget_archive .form-floating > select:not(:-moz-placeholder-shown) {
-  padding-top: 1.625rem;
-  padding-bottom: 0.625rem;
-}
-.form-floating > .form-control:not(:-ms-input-placeholder), .gform_wrapper.gravity-theme .form-floating > input[type=text]:not(:-ms-input-placeholder), .gform_wrapper.gravity-theme .form-floating > input[type=email]:not(:-ms-input-placeholder), .gform_wrapper.gravity-theme .form-floating > input[type=tel]:not(:-ms-input-placeholder), .gform_wrapper.gravity-theme .form-floating > input[type=number]:not(:-ms-input-placeholder), .gform_wrapper.gravity-theme .form-floating > textarea:not(:-ms-input-placeholder), .widget_categories .form-floating > select:not(:-ms-input-placeholder), .widget_archive .form-floating > select:not(:-ms-input-placeholder) {
-  padding-top: 1.625rem;
-  padding-bottom: 0.625rem;
 }
 .form-floating > .form-control:focus, .gform_wrapper.gravity-theme .form-floating > input[type=text]:focus,
 .gform_wrapper.gravity-theme .form-floating > input[type=email]:focus,
@@ -2863,14 +2777,6 @@ textarea.form-control-lg {
 .form-floating > .form-select, .gform_wrapper .form-floating > select {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
-}
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=email]:not(:-moz-placeholder-shown) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=tel]:not(:-moz-placeholder-shown) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=number]:not(:-moz-placeholder-shown) ~ label, .gform_wrapper.gravity-theme .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, .widget_categories .form-floating > select:not(:-moz-placeholder-shown) ~ label, .widget_archive .form-floating > select:not(:-moz-placeholder-shown) ~ label {
-  opacity: 0.65;
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
-}
-.form-floating > .form-control:not(:-ms-input-placeholder) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=text]:not(:-ms-input-placeholder) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=email]:not(:-ms-input-placeholder) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=tel]:not(:-ms-input-placeholder) ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=number]:not(:-ms-input-placeholder) ~ label, .gform_wrapper.gravity-theme .form-floating > textarea:not(:-ms-input-placeholder) ~ label, .widget_categories .form-floating > select:not(:-ms-input-placeholder) ~ label, .widget_archive .form-floating > select:not(:-ms-input-placeholder) ~ label {
-  opacity: 0.65;
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:focus ~ label, .gform_wrapper.gravity-theme .form-floating > input[type=text]:focus ~ label,
 .gform_wrapper.gravity-theme .form-floating > input[type=email]:focus ~ label,
@@ -4754,7 +4660,6 @@ textarea.form-control-lg {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
@@ -4936,12 +4841,6 @@ textarea.form-control-lg {
   color: #000;
 }
 
-@-webkit-keyframes spinner-border {
-  to {
-    transform: rotate(360deg) /* rtl:ignore */;
-  }
-}
-
 @keyframes spinner-border {
   to {
     transform: rotate(360deg) /* rtl:ignore */;
@@ -4955,7 +4854,6 @@ textarea.form-control-lg {
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  -webkit-animation: 0.75s linear infinite spinner-border;
   animation: 0.75s linear infinite spinner-border;
 }
 
@@ -4963,16 +4861,6 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   border-width: 0.2em;
-}
-
-@-webkit-keyframes spinner-grow {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 @keyframes spinner-grow {
@@ -4992,7 +4880,6 @@ textarea.form-control-lg {
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
-  -webkit-animation: 0.75s linear infinite spinner-grow;
   animation: 0.75s linear infinite spinner-grow;
 }
 
@@ -5004,7 +4891,6 @@ textarea.form-control-lg {
 @media (prefers-reduced-motion: reduce) {
   .spinner-border,
 .spinner-grow {
-    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
   }
 }
@@ -5132,14 +5018,7 @@ textarea.form-control-lg {
 }
 
 .placeholder-glow .placeholder {
-  -webkit-animation: placeholder-glow 2s ease-in-out infinite;
   animation: placeholder-glow 2s ease-in-out infinite;
-}
-
-@-webkit-keyframes placeholder-glow {
-  50% {
-    opacity: 0.2;
-  }
 }
 
 @keyframes placeholder-glow {
@@ -5148,24 +5027,13 @@ textarea.form-control-lg {
   }
 }
 .placeholder-wave {
-  -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
-  -webkit-mask-size: 200% 100%;
   mask-size: 200% 100%;
-  -webkit-animation: placeholder-wave 2s linear infinite;
   animation: placeholder-wave 2s linear infinite;
-}
-
-@-webkit-keyframes placeholder-wave {
-  100% {
-    -webkit-mask-position: -200% 0%;
-    mask-position: -200% 0%;
-  }
 }
 
 @keyframes placeholder-wave {
   100% {
-    -webkit-mask-position: -200% 0%;
     mask-position: -200% 0%;
   }
 }
@@ -5281,7 +5149,6 @@ textarea.form-control-lg {
 }
 
 .sticky-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -5289,7 +5156,6 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   .sticky-sm-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -5297,7 +5163,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 768px) {
   .sticky-md-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -5305,7 +5170,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
   .sticky-lg-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -5313,7 +5177,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .sticky-xl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -5321,7 +5184,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 1400px) {
   .sticky-xxl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -5524,7 +5386,6 @@ textarea.form-control-lg {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -6633,22 +6494,14 @@ textarea.form-control-lg {
 }
 
 .user-select-all {
-  -webkit-user-select: all !important;
-  -moz-user-select: all !important;
   user-select: all !important;
 }
 
 .user-select-auto {
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
-  -ms-user-select: auto !important;
   user-select: auto !important;
 }
 
 .user-select-none {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
   user-select: none !important;
 }
 
@@ -10454,107 +10307,65 @@ a.skip-link {
 }
 
 .fa-beat {
-  -webkit-animation-name: fa-beat;
   animation-name: fa-beat;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
   animation-timing-function: var(--fa-animation-timing, ease-in-out);
 }
 
 .fa-bounce {
-  -webkit-animation-name: fa-bounce;
   animation-name: fa-bounce;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
   animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
 }
 
 .fa-fade {
-  -webkit-animation-name: fa-fade;
   animation-name: fa-fade;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
   animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-beat-fade {
-  -webkit-animation-name: fa-beat-fade;
   animation-name: fa-beat-fade;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
   animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-flip {
-  -webkit-animation-name: fa-flip;
   animation-name: fa-flip;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
   animation-timing-function: var(--fa-animation-timing, ease-in-out);
 }
 
 .fa-shake {
-  -webkit-animation-name: fa-shake;
   animation-name: fa-shake;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
   animation-timing-function: var(--fa-animation-timing, linear);
 }
 
 .fa-spin {
-  -webkit-animation-name: fa-spin;
   animation-name: fa-spin;
-  -webkit-animation-delay: var(--fa-animation-delay, 0s);
   animation-delay: var(--fa-animation-delay, 0s);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 2s);
   animation-duration: var(--fa-animation-duration, 2s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
   animation-timing-function: var(--fa-animation-timing, linear);
 }
 
@@ -10564,15 +10375,10 @@ a.skip-link {
 
 .fa-pulse,
 .fa-spin-pulse {
-  -webkit-animation-name: fa-spin;
   animation-name: fa-spin;
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
   animation-timing-function: var(--fa-animation-timing, steps(8));
 }
 
@@ -10586,22 +10392,11 @@ a.skip-link {
 .fa-shake,
 .fa-spin,
 .fa-spin-pulse {
-    -webkit-animation-delay: -1ms;
     animation-delay: -1ms;
-    -webkit-animation-duration: 1ms;
     animation-duration: 1ms;
-    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     transition-delay: 0s;
     transition-duration: 0s;
-  }
-}
-@-webkit-keyframes fa-beat {
-  0%, 90% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
 @keyframes fa-beat {
@@ -10610,29 +10405,6 @@ a.skip-link {
   }
   45% {
     transform: scale(var(--fa-beat-scale, 1.25));
-  }
-}
-@-webkit-keyframes fa-bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
-  }
-  30% {
-    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
-  }
-  50% {
-    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
   }
 }
 @keyframes fa-bounce {
@@ -10658,24 +10430,9 @@ a.skip-link {
     transform: scale(1, 1) translateY(0);
   }
 }
-@-webkit-keyframes fa-fade {
-  50% {
-    opacity: var(--fa-fade-opacity, 0.4);
-  }
-}
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
-  }
-}
-@-webkit-keyframes fa-beat-fade {
-  0%, 100% {
-    opacity: var(--fa-beat-fade-opacity, 0.4);
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
 @keyframes fa-beat-fade {
@@ -10688,43 +10445,9 @@ a.skip-link {
     transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
-@-webkit-keyframes fa-flip {
-  50% {
-    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
-  }
-}
 @keyframes fa-flip {
   50% {
     transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
-  }
-}
-@-webkit-keyframes fa-shake {
-  0% {
-    transform: rotate(-15deg);
-  }
-  4% {
-    transform: rotate(15deg);
-  }
-  8%, 24% {
-    transform: rotate(-18deg);
-  }
-  12%, 28% {
-    transform: rotate(18deg);
-  }
-  16% {
-    transform: rotate(-22deg);
-  }
-  20% {
-    transform: rotate(22deg);
-  }
-  32% {
-    transform: rotate(-12deg);
-  }
-  36% {
-    transform: rotate(12deg);
-  }
-  40%, 100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes fa-shake {
@@ -10754,14 +10477,6 @@ a.skip-link {
   }
   40%, 100% {
     transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes fa-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @keyframes fa-spin {
@@ -21059,7 +20774,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 }
 @media (min-width: 992px) {
   .footer .menu {
-    -webkit-padding-start: 0;
     padding-inline-start: 0;
   }
 }
@@ -21120,7 +20834,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   display: inline-block;
   padding: 0.5rem 2rem !important;
   border-radius: 0;
-  -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
   clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
   transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
   align-self: flex-start;
@@ -21152,14 +20865,12 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   height: 100%;
   display: block;
   transition: background-color var(--transition);
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   background-color: var(--col-primary-400);
 }
 .deal__inner {
   transition: background-color var(--transition);
   background-color: white;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   height: 100%;
   padding: 1rem;
@@ -21231,7 +20942,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 .deal__image img {
   aspect-ratio: 16/9;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .deal__image::before {
@@ -21253,7 +20963,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 }
 @media (min-width: 992px) {
   .deal__sidebar {
-    position: -webkit-sticky;
     position: sticky;
     top: var(--h-top);
     border-right: 2px solid var(--col-accent-400);
@@ -21265,7 +20974,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   text-decoration: none;
   display: block;
   padding: 5px;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   transition: border-color var(--transition), background-color var(--transition);
 }
@@ -21274,7 +20982,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   background-color: var(--col-accent-400);
 }
 .related__inner {
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   background-color: white;
 }
@@ -21284,7 +20991,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 .related__image img {
   aspect-ratio: 16/9;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .related__image::before {
@@ -21313,10 +21019,8 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   color: var(--body-color);
 }
 .index_blog__image {
-  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
   clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   margin-bottom: 0.5rem;
@@ -21348,7 +21052,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   font-size: var(--fs-800);
 }
 .single_blog__image {
-  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
   clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
   margin-bottom: 1rem;
   position: relative;
@@ -21356,7 +21059,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 .single_blog__image img {
   aspect-ratio: 16/9;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .single_blog__image::before {
@@ -21371,7 +21073,6 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   mix-blend-mode: multiply;
 }
 .single_blog .sidebar {
-  position: -webkit-sticky;
   position: sticky;
   top: calc(var(--h-top) + 1rem);
 }
@@ -21383,11 +21084,9 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   margin-bottom: 1rem;
 }
 .single_blog_card__image {
-  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
   clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
   aspect-ratio: 16/9;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 0.5rem;
 }
@@ -21543,7 +21242,6 @@ body .gform_wrapper .gform_footer button {
   display: grid;
   background-color: white;
   padding: 1rem;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   height: 100%;
   color: black;
@@ -21591,9 +21289,7 @@ body .gform_wrapper .gform_footer button {
   aspect-ratio: 1;
   width: 80%;
   margin-left: auto;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .text_image_feature__overlay, .text_image_feature__overlay--wo {
@@ -21676,9 +21372,7 @@ body .gform_wrapper .gform_footer button {
   display: block;
   aspect-ratio: 3/4;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
   object-position: center;
   margin-bottom: 0.5rem;
   filter: grayscale(1);
@@ -21696,9 +21390,7 @@ body .gform_wrapper .gform_footer button {
   display: block;
   aspect-ratio: 4/5;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
   object-position: center;
   max-width: 300px;
   margin-inline: auto;
@@ -21789,7 +21481,6 @@ body .gform_wrapper .gform_footer button {
   text-decoration: none;
   display: block;
   padding: 5px;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   transition: border-color var(--transition), background-color var(--transition);
   height: 100%;
@@ -21798,7 +21489,6 @@ body .gform_wrapper .gform_footer button {
   background-color: var(--col-accent-400);
 }
 .latest_insights__inner {
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
   background-color: white;
   height: 100%;
@@ -21810,7 +21500,6 @@ body .gform_wrapper .gform_footer button {
 .latest_insights__image img {
   aspect-ratio: 16/9;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .latest_insights__image::before {
@@ -21839,9 +21528,7 @@ body .gform_wrapper .gform_footer button {
   aspect-ratio: 1;
   width: 80%;
   margin-left: auto;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .contact__overlay {
@@ -21958,7 +21645,6 @@ body .gform_wrapper .gform_footer button {
   left: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -21977,14 +21663,12 @@ body .gform_wrapper .gform_footer button {
   height: 100%;
   display: block;
   transition: background-color var(--transition);
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   background-color: var(--col-primary-400);
 }
 .file_list__inner {
   transition: background-color var(--transition);
   background-color: white;
-  -webkit-clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   height: 100%;
   padding: 2rem 1rem 1rem 1rem;
@@ -22030,22 +21714,18 @@ a.anchor {
 
 @media (min-width: 992px) {
   .cols-lg-2 {
-    -moz-columns: 2;
     columns: 2;
   }
 
   .cols-lg-3 {
-    -moz-columns: 3;
     columns: 3;
   }
 }
 .cols-2 {
-  -moz-columns: 2;
   columns: 2;
 }
 
 .cols-3 {
-  -moz-columns: 3;
   columns: 3;
 }
 

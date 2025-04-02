@@ -15,10 +15,6 @@
                             <li class="mb-4"><span class="fa-li"><i class="fa-solid fa-envelope has-accent-400-color"></i></span><a href="mailto:<?=get_field('contact_email', 'options')?>"><?=get_field('contact_email', 'options')?></a></li>
                             <li class="mb-4"><span class="fa-li"><i class="fa-solid fa-map-marker-alt has-accent-400-color"></i></span><?=get_field('contact_address', 'options')?></li>
                         </ul>
-                        <div class="h3">Connect</div>
-                        <?php
-                        echo do_shortcode('[social_icons class="fs-500"]');
-                        ?>
                     </div>
                 </div>
             </div>
