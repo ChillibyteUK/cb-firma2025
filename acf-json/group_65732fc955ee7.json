@@ -19,32 +19,6 @@
             "message": "Uses details provided in Site-Wide Settings",
             "new_lines": "wpautop",
             "esc_html": 0
-        },
-        {
-            "key": "field_67d03dc5274aa",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -65,5 +39,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742300308
+    "modified": 1743591383
 }
