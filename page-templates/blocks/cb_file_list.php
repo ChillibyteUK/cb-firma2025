@@ -39,7 +39,6 @@ if ( have_rows( 'files' ) ) {
 									}
 									?>
 									<div class="h4"><?= esc_html( $file_title ); ?></div>
-									<span class="text-muted fs-100">(<?= esc_html( $size ); ?>)</span>
 								</div>
 							</a>
 							</div>

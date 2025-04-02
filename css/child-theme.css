@@ -21989,11 +21989,12 @@ body .gform_wrapper .gform_footer button {
   height: 100%;
   padding: 2rem 1rem 1rem 1rem;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 0.5rem;
+  grid-template-rows: auto 1fr;
 }
 .file_list__image {
   margin-inline: auto;
+  margin-bottom: 0.5rem;
+  max-width: 150px;
 }
 .file_list__card:hover {
   background-color: var(--col-accent-400);

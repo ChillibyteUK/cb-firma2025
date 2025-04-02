@@ -18,12 +18,13 @@
         padding: 2rem 1rem 1rem 1rem;
 
         display: grid;
-        grid-template-rows: auto 1fr auto;
-        row-gap: 0.5rem;
+        grid-template-rows: auto 1fr;
     }
 
     &__image {
         margin-inline: auto;
+        margin-bottom: 0.5rem;
+        max-width: 150px;
     }
 
     &__card:hover {
