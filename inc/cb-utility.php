@@ -124,7 +124,7 @@ add_shortcode(
 			'social_icons'
 		);
 
-		$social = get_field( 'socials', 'option' );
+		$social = get_field( 'social', 'option' );
 		if ( ! $social ) {
 			return '';
 		}
@@ -136,7 +136,7 @@ add_shortcode(
 			'twitter'   => 'x-twitter',
 			'pinterest' => 'pinterest',
 			'youtube'   => 'youtube',
-			'linkedin'  => 'linkedin-in',
+			'linkedin'  => 'linkedin',
 		);
 
 		foreach ( $social_map as $key => $icon ) {
