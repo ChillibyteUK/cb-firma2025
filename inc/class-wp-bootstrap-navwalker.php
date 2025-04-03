@@ -176,7 +176,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			// Set title from item to the $atts array - if title is empty then
 			// default to item title.
 			if ( empty( $item->attr_title ) ) {
-				$atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
+				$atts['title'] = ! empty( $item->title ) ? wp_strip_all_tags( $item->title ) : '';
 			} else {
 				$atts['title'] = $item->attr_title;
 			}
@@ -189,7 +189,6 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			// If item has_children add atts to <a>.
-			// if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
 			if ( isset( $args->has_children ) && $args->has_children && 1 !== $args->depth ) {
 				$atts['href']           = '#';
 				$atts['data-bs-toggle'] = 'dropdown';
@@ -301,11 +300,6 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * END appending the internal item contents to the output.
 			 */
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-			// if ( $item -> object === "wpml_ls_menu_item" ) {
-            //     $output .=  '<a href="' . $item->url . '" class="nav-link">'. $item->title . '</a>';
-            // } else {
-            //     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-            // }
 		}
 
 		/**

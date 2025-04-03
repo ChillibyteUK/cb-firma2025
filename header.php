@@ -8,7 +8,7 @@
  */
 
 // Exit if accessed directly.
-defined('ABSPATH') || exit;
+defined( 'ABSPATH' ) || exit;
 session_start();
 ?>
 <!DOCTYPE html>
@@ -16,23 +16,24 @@ session_start();
 
 <head>
     <meta
-        charset="<?php bloginfo('charset'); ?>">
+        charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/inter-v18-latin-regular.woff2"
+        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/inter-v18-latin-regular.woff2' ); ?>"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/inter-v18-latin-300.woff2"
+        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/inter-v18-latin-300.woff2' ); ?>"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/inter-v18-latin-600.woff2"
+        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/inter-v18-latin-600.woff2' ); ?>"
         as="font" type="font/woff2" crossorigin="anonymous">
     <?php
-if (get_field('ga_property', 'options')) {
-    ?>
+	if ( ! is_user_logged_in() ) {
+		if ( get_field( 'ga_property', 'options' ) ) {
+    		?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async
-        src="https://www.googletagmanager.com/gtag/js?id=<?=get_field('ga_property', 'options')?>">
+        src="https://www.googletagmanager.com/gtag/js?id=<?= esc_attr( get_field( 'ga_property', 'options' ) ); ?>">
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -42,13 +43,13 @@ if (get_field('ga_property', 'options')) {
         }
         gtag('js', new Date());
         gtag('config',
-            '<?=get_field('ga_property', 'options')?>'
+            '<?= esc_js( get_field( 'ga_property', 'options' ) ); ?>'
         );
     </script>
-    <?php
-}
-if (get_field('gtm_property', 'options')) {
-    ?>
+    		<?php
+		}
+		if ( get_field( 'gtm_property', 'options' ) ) {
+    		?>
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -65,22 +66,23 @@ if (get_field('gtm_property', 'options')) {
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer',
-            '<?=get_field('gtm_property', 'options')?>'
+            '<?= esc_js( get_field( 'gtm_property', 'options' ) ); ?>'
         );
     </script>
     <!-- End Google Tag Manager -->
-    <?php
-}
-if (get_field('google_site_verification', 'options')) {
-    echo '<meta name="google-site-verification" content="' . get_field('google_site_verification', 'options') . '" />';
-}
-if (get_field('bing_site_verification', 'options')) {
-    echo '<meta name="msvalidate.01" content="' . get_field('bing_site_verification', 'options') . '" />';
-}
+    		<?php
+		}
+	}
+	if ( get_field( 'google_site_verification', 'options' ) ) {
+		echo '<meta name="google-site-verification" content="' . esc_attr( get_field( 'google_site_verification', 'options' ) ) . '" />';
+	}
+	if ( get_field( 'bing_site_verification', 'options' ) ) {
+		echo '<meta name="msvalidate.01" content="' . esc_attr( get_field( 'bing_site_verification', 'options' ) ) . '" />';
+	}
 
-wp_head();
-if (is_front_page()) {
-    ?>
+	wp_head();
+	if ( is_front_page() ) {
+    	?>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -100,18 +102,17 @@ if (is_front_page()) {
             "telephone": "+44 (0) 20 459 10609",
             "email": "info@firma.partners"
         }
-        }
     </script>
-    <?php
-}
-?>
+	    <?php
+	}
+	?>
 </head>
 
 <body <?php body_class(); ?>
     <?php understrap_body_attributes(); ?>>
     <?php
-do_action('wp_body_open');
-?>
+	do_action( 'wp_body_open' );
+	?>
     <header id="wrapperNavbar">
         <nav class="navbar navbar-expand-md">
             <div class="container-xl pt-2 nav-top  align-items-center">
@@ -123,20 +124,21 @@ do_action('wp_body_open');
                     </button>
                 </div>                
                 <div class="collapse navbar-collapse" id="navbar">
-                        <?php
-    wp_nav_menu(
-        array(
-    'theme_location'  => 'primary_nav',
-    'container_class' => 'container-xl w-100',
-    'menu_class'      => 'navbar-nav justify-content-end gap-4',
-    'fallback_cb'     => '',
-    'menu_id'         => 'navbarr',
-    'depth'           => 3,
-    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-    )
-    );
-    ?>
+					<?php
+					wp_nav_menu(
+        				array(
+							'theme_location'  => 'primary_nav',
+							'container_class' => 'container-xl w-100',
+							'menu_class'      => 'navbar-nav justify-content-end gap-4',
+							'fallback_cb'     => '',
+							'menu_id'         => 'navbarr',
+							'depth'           => 3,
+							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						)
+    				);
+    				?>
                 </div>
             </div>
         </nav>
-</header>
+	</header>
