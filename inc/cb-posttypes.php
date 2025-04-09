@@ -32,7 +32,7 @@ function cb_register_post_types() {
 		'has_archive'           => false,
 		'show_in_menu'          => true,
 		'show_in_nav_menus'     => true,
-		'menu_icon'             => 'dashicons-open-folder',
+		'menu_icon'             => 'dashicons-format-quote',
 		'exclude_from_search'   => true,
 		'capability_type'       => 'post',
 		'map_meta_cap'          => true,
@@ -59,7 +59,7 @@ function cb_register_post_types() {
 		'has_archive'           => false,
 		'show_in_menu'          => true,
 		'show_in_nav_menus'     => true,
-		'menu_icon'             => 'dashicons-open-folder',
+		'menu_icon'             => 'dashicons-groups',
 		'exclude_from_search'   => true,
 		'capability_type'       => 'post',
 		'map_meta_cap'          => true,
@@ -86,7 +86,7 @@ function cb_register_post_types() {
 		'has_archive'           => true,
 		'show_in_menu'          => true,
 		'show_in_nav_menus'     => true,
-		'menu_icon'             => 'dashicons-open-folder',
+		'menu_icon'             => 'dashicons-thumbs-up',
 		'exclude_from_search'   => true,
 		'capability_type'       => 'post',
 		'map_meta_cap'          => true,
@@ -101,6 +101,36 @@ function cb_register_post_types() {
 	);
 
 	register_post_type( 'deals', $args );
+
+	$args = array(
+		'label'                 => __( 'Press', 'cb-firma2025' ),
+		'labels'                => array(
+			'name'          => __( 'Press', 'cb-firma2025' ),
+			'singular_name' => __( 'Press', 'cb-firma2025' ),
+		),
+		'public'                => true,
+		'publicly_queryable'    => true,
+		'show_ui'               => true,
+		'show_in_rest'          => true,
+		'rest_controller_class' => 'WP_REST_Posts_Controller',
+		'has_archive'           => true,
+		'show_in_menu'          => true,
+		'show_in_nav_menus'     => true,
+		'menu_icon'             => 'dashicons-media-document',
+		'exclude_from_search'   => true,
+		'capability_type'       => 'post',
+		'map_meta_cap'          => true,
+		'hierarchical'          => false,
+		'rewrite'               => array(
+			'slug'       => 'press',
+			'with_front' => false,
+		),
+		'query_var'             => true,
+		'supports'              => array( 'title', 'editor' ),
+		'show_in_graphql'       => false,
+	);
+
+	register_post_type( 'press', $args );
 }
 add_action( 'init', 'cb_register_post_types' );
 
