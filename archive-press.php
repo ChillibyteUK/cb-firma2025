@@ -40,6 +40,7 @@ get_header();
                     <?php endif; ?>
                     <div class="card-body p-3 d-flex flex-column justify-content-between h-100">
                         <h2 class="card-title h4"><?= esc_html( get_the_title() ); ?></h2>
+                        <div class=""><?php echo get_the_date('jS F Y'); ?></div>
                         <p class="card-text"><?= wp_kses_post( wp_trim_words( get_the_content(), 20 ) ); ?></p>
                         <a href="<?= esc_url( get_the_permalink() ); ?>" class="text-center btn d-block text-white p-2">Read more</a>
                     </div>

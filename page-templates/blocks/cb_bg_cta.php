@@ -13,8 +13,8 @@ $l         = get_field( 'cta' ) ? get_field( 'cta' ) : array(
     'url'   => '/contact-us/',
     'title' => 'Contact us',
 );
-$cta_title = get_field( 'title' ) ? get_field( 'title' ) : 'Ready to elevate your real estate ventures?';
-$content   = get_field( 'content' ) ? get_field( 'content' ) : 'Get in touch with use today and let\'s craft a tailored financial stragetgy.';
+$cta_title = get_field( 'title' ) ? get_field( 'title' ) : 'Contact Us';
+$content   = get_field( 'content' ) ? get_field( 'content' ) : 'Contact us to discuss how we can create a tailored lending strategy.';
 ?>
 <section class="bg_cta py-5" style="background-image:url(<?= esc_url( $img ); ?>)">
     <div class="container-xl py-5">
