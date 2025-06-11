@@ -10,15 +10,15 @@
             "type": "message",
             "instructions": "",
             "required": 0,
-            "conditional_logic": false,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "esc_html": 0,
-            "new_lines": "wpautop"
+            "message": "If \"Intro\" and \"Title\" have values, \"Intro\" it will be output as H1 and \"Title\" as H2.\r\nIf \"Intro\" has no value, \"Title\" will be the H1.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_67d16d35cf261",
@@ -64,7 +64,7 @@
         },
         {
             "key": "field_67d16d70cf263",
-            "label": "Title",
+            "label": "Intro",
             "name": "title",
             "aria-label": "",
             "type": "text",
@@ -85,7 +85,7 @@
         },
         {
             "key": "field_67d16d7acf264",
-            "label": "Subtitle",
+            "label": "Title",
             "name": "subtitle",
             "aria-label": "",
             "type": "text",
@@ -123,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741778610
+    "modified": 1749638963
 }
