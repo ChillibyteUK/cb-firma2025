@@ -297,32 +297,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_67f66250a5871",
-            "label": "Press Hero",
-            "name": "press_hero",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
-        },
-        {
             "key": "field_657330b676a1a",
             "label": "Maps URL",
             "name": "maps_url",
@@ -361,5 +335,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744200282
+    "modified": 1749641970
 }

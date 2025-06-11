@@ -239,6 +239,29 @@ function wpdocs_remove_shortcode_from_index( $content ) {
 add_filter( 'the_content', 'wpdocs_remove_shortcode_from_index' );
 
 
+/**
+ * Adds the Press archive link to the Yoast SEO breadcrumbs for single press posts.
+ *
+ * @param array $links The existing breadcrumb links.
+ * @return array Modified breadcrumb links with the Press archive link added.
+ */
+function add_press_archive_link_to_breadcrumbs( $links ) {
+    if ( is_singular( 'press' ) ) {
+
+        // Create the /press/ archive link.
+        $press_link = array(
+            'url'  => site_url( '/press/' ),
+            'text' => 'Press',
+        );
+
+        // Insert it after the homepage link.
+        array_splice( $links, 1, 0, array( $press_link ) );
+    }
+
+    return $links;
+}
+add_filter( 'wpseo_breadcrumb_links', 'add_press_archive_link_to_breadcrumbs' );
+
 // GF really is pants.
 /**
  * Change submit from input to button.

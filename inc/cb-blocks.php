@@ -238,6 +238,22 @@ function acf_blocks() {
 			)
 		);
 
+		acf_register_block_type(
+			array(
+				'name'            => 'cb_press_archive',
+				'title'           => __( 'CB Press Archive' ),
+				'category'        => 'layout',
+				'icon'            => 'cover-image',
+				'render_template' => 'page-templates/blocks/cb_press_archive.php',
+				'mode'            => 'edit',
+				'supports'        => array(
+					'mode'      => false,
+					'anchor'    => true,
+					'className' => true,
+				),
+			)
+		);
+
     }
 }
 add_action( 'acf/init', 'acf_blocks' );

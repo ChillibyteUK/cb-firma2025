@@ -113,7 +113,7 @@ function cb_register_post_types() {
 		'show_ui'               => true,
 		'show_in_rest'          => true,
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'show_in_menu'          => true,
 		'show_in_nav_menus'     => true,
 		'menu_icon'             => 'dashicons-media-document',
