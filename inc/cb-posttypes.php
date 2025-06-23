@@ -130,7 +130,7 @@ function cb_register_post_types() {
 		'show_in_graphql'       => false,
 	);
 
-	register_post_type( 'press', $args );
+	// register_post_type( 'press', $args );
 }
 add_action( 'init', 'cb_register_post_types' );
 
