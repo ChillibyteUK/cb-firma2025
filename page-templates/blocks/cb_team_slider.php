@@ -57,7 +57,7 @@
     	                        $slug = acf_slugify( get_the_title() );
                             	?>
                                 <li class="team_slider__card splide__slide">
-                                    <a href="<?= esc_url( '/our-team/#' . $slug ); ?>">
+                                    <a href="<?= esc_url( get_the_permalink( $q->ID ) ); ?>">
                                         <div class="team_slider__card_inner">
                                             <img class="team_slider__image"
 												src="<?= esc_url( get_the_post_thumbnail_url( $q->ID, 'large' ) ); ?>"
