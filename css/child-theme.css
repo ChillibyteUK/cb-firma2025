@@ -21692,6 +21692,15 @@ body .gform_wrapper .gform_footer button {
   font-size: var(--fs-100);
 }
 
+.team_detail__card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  height: 100%;
+}
+.team_detail__card:hover > .team_detail__image {
+  filter: grayscale(0) !important;
+}
 .team_detail__image {
   display: block;
   aspect-ratio: 4/5;
@@ -21704,19 +21713,22 @@ body .gform_wrapper .gform_footer button {
   margin-inline: auto;
   filter: grayscale(1);
   transition: filter var(--transition);
+  margin-bottom: 0.5rem;
 }
 .team_detail__name {
   font-size: var(--fs-600);
   margin-bottom: 0;
+  text-align: center;
 }
 .team_detail__role {
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 1rem;
 }
-.team_detail__meta {
-  display: flex;
-  gap: 1rem;
+.team_detail .wp-block-button__link, .team_detail body .gform_wrapper .gform_footer button, body .gform_wrapper .gform_footer .team_detail button {
+  align-self: flex-end;
+  justify-self: center;
 }
 
 .stats__stat {

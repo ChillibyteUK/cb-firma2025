@@ -258,6 +258,18 @@ function add_press_archive_link_to_breadcrumbs( $links ) {
         array_splice( $links, 1, 0, array( $press_link ) );
     }
 
+	if ( is_singular( 'people' ) ) {
+
+        // Create the /our-team/ archive link.
+        $people_link = array(
+            'url'  => site_url( '/our-team/' ),
+            'text' => 'Our Team',
+        );
+
+        // Insert it after the homepage link.
+        array_splice( $links, 1, 0, array( $people_link ) );
+    }
+
     return $links;
 }
 add_filter( 'wpseo_breadcrumb_links', 'add_press_archive_link_to_breadcrumbs' );
