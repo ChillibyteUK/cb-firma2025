@@ -92,7 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
         perPage: 3,
         perMove: 1,
         autoplay: false, // Start with autoplay disabled
-        pauseOnHover: true,
+		interval: 3000,
+        pauseOnHover: false,
         pagination: false,
         arrows: false,
         breakpoints: {
@@ -105,8 +106,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
-                splide.options = { autoplay: true };
-                observer.disconnect(); // Only trigger once
+				console.log('Autoplay started');
+				splide.options = { autoplay: true };
+				splide.Components.Autoplay.play();
+				observer.disconnect(); // Only trigger once
             }
         });
     }, {
