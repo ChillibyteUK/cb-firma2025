@@ -85,25 +85,38 @@ add_action(
 	function () {
     	?>
 <script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", function() {
-		new Splide('.team_slider__slider', {
-			type: 'loop',
-			perPage: 3, // Show 3 slides at a time
-			perMove: 1, // Move 1 slide per scroll
-			autoplay: true,
-			pauseOnHover: true,
-			pagination: false, // Show dots
-			arrows: false, // Hide next/prev buttons
-			breakpoints: {
-				992: {
-					perPage: 2
-				}, // Show 2 slides on tablets
-				768: {
-					perPage: 1
-				} // Show 1 slide on mobile
-			}
-		}).mount();
-	});
+document.addEventListener("DOMContentLoaded", function() {
+    const sliderEl = document.querySelector('.team_slider__slider');
+    const splide = new Splide(sliderEl, {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        autoplay: false, // Start with autoplay disabled
+        pauseOnHover: true,
+        pagination: false,
+        arrows: false,
+        breakpoints: {
+            992: { perPage: 2 },
+            768: { perPage: 1 }
+        }
+    }).mount();
+
+    // Intersection Observer to start autoplay when 20% visible
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+                splide.options = { autoplay: true };
+                observer.disconnect(); // Only trigger once
+            }
+        });
+    }, {
+        threshold: [0, 0.2, 1]
+    });
+
+    if (sliderEl) {
+        observer.observe(sliderEl);
+    }
+});
 </script>
 		<?php
 	},
