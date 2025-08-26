@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
-				console.log('Autoplay started');
 				splide.options = { autoplay: true };
 				splide.Components.Autoplay.play();
 				observer.disconnect(); // Only trigger once
