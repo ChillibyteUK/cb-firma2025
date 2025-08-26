@@ -90,7 +90,7 @@ add_action(
 			type: 'loop',
 			perPage: 3, // Show 3 slides at a time
 			perMove: 1, // Move 1 slide per scroll
-			autoplay: false,
+			autoplay: true,
 			pauseOnHover: true,
 			pagination: false, // Show dots
 			arrows: false, // Hide next/prev buttons
