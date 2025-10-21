@@ -134,3 +134,58 @@ add_filter(
     99,
     2
 );
+
+/**
+ * Output Person schema for CPT "people" using ACF fields.
+ */
+add_action('wp_head', function () {
+    if (!is_singular('people')) {
+        return;
+    }
+
+    global $post;
+
+    // Core values
+    $name = get_the_title($post);
+    $url  = get_permalink($post);
+
+    // Featured image (full size)
+    $img = '';
+    if (has_post_thumbnail($post)) {
+        $img = wp_get_attachment_image_url(get_post_thumbnail_id($post), 'full');
+    }
+
+    // ACF fields (guard if ACF not active)
+    $role      = function_exists('get_field') ? (string) get_field('role', $post->ID) : '';
+    $email     = function_exists('get_field') ? (string) get_field('email_address', $post->ID) : '';
+    $linkedin  = function_exists('get_field') ? (string) get_field('linkedin_profile', $post->ID) : '';
+    $bio_raw   = function_exists('get_field') ? (string) get_field('biography', $post->ID) : '';
+
+    // Clean description (optional)
+    $description = '';
+    if ($bio_raw !== '') {
+        $description = trim(wp_strip_all_tags($bio_raw));
+    }
+
+    $data = [
+        '@context'  => 'https://schema.org/',
+        '@type'     => 'Person',
+        'name'      => $name,
+        'url'       => $url,
+        'worksFor'  => [
+            '@type' => 'Organization',
+            'name'  => 'Firma Partners',
+            // 'url' => home_url('/'), // uncomment if you want org URL too
+        ],
+    ];
+
+    if ($img)        { $data['image'] = $img; }
+    if ($role)       { $data['jobTitle'] = $role; }
+    if ($email)      { $data['email']   = 'mailto:' . sanitize_email($email); }
+    if ($linkedin)   { $data['sameAs']  = [ esc_url_raw($linkedin) ]; }
+    if ($description){ $data['description'] = $description; }
+
+    echo '<script type="application/ld+json">' .
+         wp_json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) .
+         "</script>\n";
+}, 99);
