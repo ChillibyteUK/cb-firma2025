@@ -9,7 +9,7 @@
 <section class="services_feature has-tile-bg has-tile-bg--wo has-tile-bg--right py-5">
     <div class="container-xl py-5">
         <div class="row g-5">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <h2 class="underline mb-4">
                     <?= esc_html( get_field( 'title' ) ); ?>
                 </h2>
@@ -26,7 +26,7 @@
                 }
 				?>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <div class="row g-4">
                 <?php
                 $d = 0;
