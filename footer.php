@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php wp_nav_menu( array( 'theme_location' => 'footer_menu2' ) ); ?>
             </div>
             <div class="col-sm-6 col-lg-3 mb-2 order-4 order-lg-3 pt-4">
-				<div class="footer__title mt-4">Popular Locations</div>
+				<div class="footer__title">Popular Locations</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer_menu3' ) ); ?>
             </div>
         </div>
