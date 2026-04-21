@@ -89,6 +89,7 @@ function widgets_init() {
 			'primary_nav'  => __( 'Primary Nav', 'cb-firma2025' ),
 			'footer_menu1' => __( 'Footer Menu 1', 'cb-firma2025' ),
 			'footer_menu2' => __( 'Footer Menu 2', 'cb-firma2025' ),
+			'footer_menu3' => __( 'Footer Menu 3', 'cb-firma2025' ),
 		)
 	);
 
