@@ -191,37 +191,74 @@ add_action('wp_head', function () {
 }, 99);
 
 add_action('wp_head', function () {
-    if (!is_page(183)) {
-        return;
+
+    $schema = null;
+
+    if (is_page(183)) {
+
+        $schema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'FinancialProduct',
+            'name' => 'Shorter Term Development Finance',
+            'description' => 'Short term real estate finance structured as whole-loan solutions for property developers and investors. Loan sizes from £20m, up to 75% LTV, minimum 1-year terms.',
+            'url' => 'https://firma.partners/shorter-term-finance/',
+            'feesAndCommissionsSpecification' => 'Loan sizes from £20m. Up to 75% LTV. Minimum term 1 year.',
+            'areaServed' => [
+                '@type' => 'Country',
+                'name' => 'United Kingdom',
+            ],
+            'provider' => [
+                '@type' => 'Organization',
+                'name' => 'Firma Partners',
+                'url' => 'https://firma.partners',
+                'telephone' => '+442045910609',
+                'email' => 'info@firma.partners',
+                'sameAs' => 'https://uk.linkedin.com/company/firma-partners',
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => '9th Floor, Berkeley Square House',
+                    'addressLocality' => 'London',
+                    'postalCode' => 'W1J 6BR',
+                    'addressCountry' => 'GB',
+                ],
+            ],
+        ];
+
+    } elseif (is_page(19)) {
+
+        $schema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'FinancialProduct',
+            'name' => 'Development Finance',
+            'description' => 'Senior and whole loan development finance for residential, mixed-use and commercial schemes. Loan sizes from £20m, up to 75% LTV, minimum 2-year terms.',
+            'url' => 'https://firma.partners/development-finance/',
+            'feesAndCommissionsSpecification' => 'Loan sizes from £20m. Up to 75% LTV / 90% LTC. Minimum term 2 years.',
+            'areaServed' => [
+                '@type' => 'Country',
+                'name' => 'United Kingdom',
+            ],
+            'provider' => [
+                '@type' => 'Organization',
+                'name' => 'Firma Partners',
+                'url' => 'https://firma.partners',
+                'telephone' => '+442045910609',
+                'email' => 'info@firma.partners',
+                'sameAs' => 'https://uk.linkedin.com/company/firma-partners',
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => '9th Floor, Berkeley Square House',
+                    'addressLocality' => 'London',
+                    'postalCode' => 'W1J 6BR',
+                    'addressCountry' => 'GB',
+                ],
+            ],
+        ];
     }
 
-    $schema = [
-        '@context' => 'https://schema.org',
-        '@type' => 'FinancialProduct',
-        'name' => 'Shorter Term Development Finance',
-        'description' => 'Short term real estate finance structured as whole-loan solutions for property developers and investors. Loan sizes from £20m, up to 75% LTV, minimum 1-year terms.',
-        'url' => 'https://firma.partners/shorter-term-finance/',
-        'feesAndCommissionsSpecification' => 'Loan sizes from £20m. Up to 75% LTV. Minimum term 1 year.',
-        'areaServed' => [
-            '@type' => 'Country',
-            'name' => 'United Kingdom',
-        ],
-        'provider' => [
-            '@type' => 'Organization',
-            'name' => 'Firma Partners',
-            'url' => 'https://firma.partners',
-            'telephone' => '+442045910609',
-            'email' => 'info@firma.partners',
-            'sameAs' => 'https://uk.linkedin.com/company/firma-partners',
-            'address' => [
-                '@type' => 'PostalAddress',
-                'streetAddress' => '9th Floor, Berkeley Square House',
-                'addressLocality' => 'London',
-                'postalCode' => 'W1J 6BR',
-                'addressCountry' => 'GB',
-            ],
-        ],
-    ];
+    if ($schema) {
+        echo '<script type="application/ld+json">' .
+            wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) .
+            '</script>';
+    }
 
-    echo '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>';
-});
+}, 20);
