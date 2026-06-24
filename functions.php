@@ -189,3 +189,39 @@ add_action('wp_head', function () {
          wp_json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) .
          "</script>\n";
 }, 99);
+
+add_action('wp_head', function () {
+    if (!is_page(183)) {
+        return;
+    }
+
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'FinancialProduct',
+        'name' => 'Shorter Term Development Finance',
+        'description' => 'Short term real estate finance structured as whole-loan solutions for property developers and investors. Loan sizes from £20m, up to 75% LTV, minimum 1-year terms.',
+        'url' => 'https://firma.partners/shorter-term-finance/',
+        'feesAndCommissionsSpecification' => 'Loan sizes from £20m. Up to 75% LTV. Minimum term 1 year.',
+        'areaServed' => [
+            '@type' => 'Country',
+            'name' => 'United Kingdom',
+        ],
+        'provider' => [
+            '@type' => 'Organization',
+            'name' => 'Firma Partners',
+            'url' => 'https://firma.partners',
+            'telephone' => '+442045910609',
+            'email' => 'info@firma.partners',
+            'sameAs' => 'https://uk.linkedin.com/company/firma-partners',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => '9th Floor, Berkeley Square House',
+                'addressLocality' => 'London',
+                'postalCode' => 'W1J 6BR',
+                'addressCountry' => 'GB',
+            ],
+        ],
+    ];
+
+    echo '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>';
+});
